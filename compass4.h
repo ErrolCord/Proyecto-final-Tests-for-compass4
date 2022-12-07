@@ -1,6 +1,13 @@
+//Ingenieria Electronica
+//Proyecto Final: Tests for compass
+//Curso: Aplicaciones de microcontroladores
+//Profesor: Arnoldo Alcides Ramires
+//Estudiantes: Andres Molina Castro, Ramses Camacho Chavarria, Errol Cordero Cordero
+//Entrega: 8 de diciembre de 2022
+//Archivo: compass4 header file
 #include <stdio.h>
-#ifndef MOCK_H_INCLUDED             
-#define MOCK_H_INCLUDED             
+#ifndef COMPASS4_H_INCLUDED             
+#define COMPASS4_H_INCLUDED             
                 
 //#include <Arduino.h>
 

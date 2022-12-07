@@ -1,5 +1,12 @@
+//Ingenieria Electronica
+//Proyecto Final: Tests for compass
+//Curso: Aplicaciones de microcontroladores
+//Profesor: Arnoldo Alcides Ramires
+//Estudiantes: Andres Molina Castro, Ramses Camacho Chavarria, Errol Cordero Cordero
+//Entrega: 8 de diciembre de 2022
+//Archivo: compass4 source file
 #include<stdio.h>
-#include"mock.h"           
+#include"compass4.h"           
 //#include <Arduino.h>  
 
 compass4_t ctx = 0; 
@@ -80,8 +87,8 @@ void compass4_generic_read (compass4_t ctx, uint8_t reg, uint8_t data_buf)  //le
 }
 
 //---------------------------------------------------------------------
-/*uint8_t compass4_get_interrupt ( uint8_t err )  //valor para interrupción
+uint8_t compass4_get_interrupt ( uint8_t err )  //valor para interrupción
 {
-	err = 0;
+	err = 1;
     return err;
-}*/
+}
