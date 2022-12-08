@@ -15,22 +15,23 @@
 
 typedef char uint8_t;												           //Type definition de uint8_t como inicializador de dato char para simular representación de la biblioteca original
 typedef int compass4_t;												           //Type definition de compass4 como inicializador de dato int para simular representación de la biblioteca original
-
+typedef float int32_t;
+typedef int uint16_t;
 
 //************************************
 //Inicializadción de estructuras type definition
 typedef struct flux_{                                                          //Inicialización de estructura de datos llamada flux
-	int x;                                                                     //Inicialización de variable entera x para la estructura flux 	
-	int y;                                                                     //Inicialización de variable entera y para la estructura flux
-	int z;                                                                     //Inicialización de variable entera z para la estructura flux
+	int32_t x;                                                                 //Inicialización de variable entera x para la estructura flux 	
+	int32_t y;                                                                 //Inicialización de variable entera y para la estructura flux
+	int32_t z;                                                                 //Inicialización de variable entera z para la estructura flux
 }flux_;                                                                        //Definición de nombre flux_
 struct flux_ flux;															   //Definición de nombre flux para la estructura
 
 //************************************
 typedef struct raw{                                                            //Inicialización de estructura de datos llamada raw_data
-	int x;                                                                     //Inicialización de variable entera x para la estructura raw_data 
-    int y;                                                                     //Inicialización de variable entera y para la estructura raw_data
-    int z;                                                                     //Inicialización de variable entera z para la estructura raw_data
+	int32_t x;                                                                 //Inicialización de variable entera x para la estructura raw_data 
+    int32_t y;                                                                 //Inicialización de variable entera y para la estructura raw_data
+    int32_t z;                                                                 //Inicialización de variable entera z para la estructura raw_data
 }raw;                                                                          //Definición de nombre raw
 struct raw raw_data;														   //Definición de nombre raw_data para la estructura
 
@@ -41,9 +42,9 @@ struct raw raw_data;														   //Definición de nombre raw_data para la est
 
 //************************************
 typedef struct ra_{                                                            //Inicialización de estructura de datos llamada ra
-	int x;                                                                     //Inicialización de variable entera x para la estructura ra
-	int y;                                                                     //Inicialización de variable entera y para la estructura ra
-	int z;                                                                     //Inicialización de variable entera z para la estructura	ra
+	int32_t x;                                                                 //Inicialización de variable entera x para la estructura ra
+	int32_t y;                                                                 //Inicialización de variable entera y para la estructura ra
+	int32_t z;                                                                 //Inicialización de variable entera z para la estructura	ra
 }ra_;														                   //Definición de nombre ra_ para la estructura
 struct ra_ ra;														           //Definición de nombre ra para la estructura
 

@@ -34,9 +34,9 @@ void application_task ( void )                                                 /
     else                                                                       //Estructura else para la ejecución de código en caso de no cumplirse la condición de la estructura if anterior
     {
         printf( ">> Magnetic flux data << \n" );                               //Impresión de título precediendo la impresión de los datos de x, y , z
-        printf( ">> X: %d \n", flux.x);                                        //Impresión de dato del eje x
-        printf( ">> Y: %d \n", flux.y);                                        //Impresión de dato del eje y
-        printf( ">> Z: %d \n", flux.z);                                        //Impresión de dato del eje z
+        printf( ">> X: %f \n", flux.x);                                        //Impresión de dato del eje x
+        printf( ">> Y: %f \n", flux.y);                                        //Impresión de dato del eje y
+        printf( ">> Z: %f \n", flux.z);                                        //Impresión de dato del eje z
     }
     printf( "-----------------------------\n" );                               //Impresión de texto separador de datos
 
@@ -76,7 +76,7 @@ uint8_t compass4_get_axis (compass4_t ctx, compass4_t axis) 				   //Función con
 //------------------------------------------------------------------
 uint8_t drdy_wait ( uint8_t drdy_timeout ) 				                       //Función con dato de retorno de tipo char(uint8_t) timeout de data ready
 {
-     drdy_timeout = 0;                                                         //Se carga el dato en la variable de tipo char(uint8_t) drdy_timeout 0 para no interrupción y 1 para error por timeout, simulando un tiempo de espera agotado para la señal de dato listo
+     drdy_timeout = compass4_get_interrupt (ctx);                              //Se carga el dato en la variable de tipo char(uint8_t) drdy_timeout 0 para no interrupción y 1 para error por timeout, simulando un tiempo de espera agotado para la señal de dato listo
 
     return drdy_timeout;                                                       //Retorna el dato asignado a la variable drdy_timeout
 }
@@ -85,14 +85,14 @@ uint8_t drdy_wait ( uint8_t drdy_timeout ) 				                       //Función 
 void compass4_generic_read (compass4_t ctx, uint8_t reg, uint8_t data_buf)     //Método para simular la obtención de datos desde la interfaz del sensor 
 {
 
-    ra.x= 50;														           //Se carga un valor en el dato x la estructura ra
-    ra.y= 63;														           //Se carga un valor en el dato x la estructura ra
-    ra.z= 42;														           //Se carga un valor en el dato x la estructura ra
+    ra.x= 1.0;														           //Se carga un valor en el dato x la estructura ra
+    ra.y= 90.0;														           //Se carga un valor en el dato y la estructura ra
+    ra.z= 42.0;														           //Se carga un valor en el dato z la estructura ra
 }
 
 //-------------------------------------------------------------------
 uint8_t compass4_get_interrupt ( uint8_t err )								   //Función con dato de retorno de tipo char(uint8_t) para la simulación de intrrupción 
 {
-	err = 1;																   //Asignación de dato a la variable err siendo 0 para la no interupción y 1 para la existencia de esta
+	err = 0;																   //Asignación de dato a la variable err siendo 0 para la no interupción y 1 para la existencia de esta
     return err;																   //retorno del dato asignado a la variable err
 }
